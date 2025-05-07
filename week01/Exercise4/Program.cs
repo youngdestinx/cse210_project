@@ -4,6 +4,25 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise4 Project.");
+        List<int> numbers = new List<int>();
+
+        Console.WriteLine("Enter a lists of numbers, type 0 when finished.");
+        
+        while (true)
+        {
+            Console.Write("Enter a number: ");
+            string seriesOfNumbers = Console.ReadLine();
+            int number = int.Parse(seriesOfNumbers);
+
+            numbers.Add(number)
+        
+
+            if (number == 0)
+            {
+                break;
+            }
+        }
+
+        int total = numbers.
     }
 }
