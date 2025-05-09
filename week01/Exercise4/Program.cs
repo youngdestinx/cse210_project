@@ -14,7 +14,8 @@ class Program
             string seriesOfNumbers = Console.ReadLine();
             int number = int.Parse(seriesOfNumbers);
 
-            numbers.Add(number)
+            numbers.Add(number);
+            numbers.Remove(0);
         
 
             if (number == 0)
@@ -23,6 +24,13 @@ class Program
             }
         }
 
-        int total = numbers.
+        int sum = numbers.Sum();
+        Console.WriteLine($"The sum is: {sum}");
+
+        double average = numbers.Average();
+        Console.WriteLine($"The average is: {average}");
+
+        int largest = numbers.Max();
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
