@@ -10,24 +10,25 @@ public class Scripture
     public Scripture(Reference reference, Word word)
     {
         _reference = reference;
-        _word = word;
     }
 
-    public void HideRandomWords()
+    public void HideRandomWords(int numberToHide)
     {
-        _word.Hide();
-        _word.Show();
+        for (int i = 0; i < numberToHide; i++)
+        {
+            _word.Hide();
+        }
     }
 
     public string GetDisplayText()
     {
-        string wordText = $"{_reference.GetDisplayText()}\n{_word.GetDisplayText()}";
+        string wordText = $"{_reference.GetDisplayText()}:\n{_word.GetDisplayText}";
         return wordText;
     }
 
     public bool IscompletelyHidden()
     {
-       return _word.IsHidden();
+        
     }
         
 }
